@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class GradeApp {
+	public static void main (String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter Score");
+		double score = input.nextDouble();
+		
+		try {
+		if(score >= 45.0 && score <= 49.9) {
+			System.out.println("D "+ score);
+		}else if(score >= 50.0 && score <= 59.9)
+			System.out.println("C "+ score);
+		else if(score >= 60.0 && score <= 69.9)
+			System.out.println("B "+ score);
+		else if(score >= 70.0 && score <= 100)
+			System.out.println("A "+ score);
+		else if(score > 100)
+			System.out.println("Out of range");
+		else
+			System.out.println("F "+ score);
+		}
+		catch(Exception e) {
+			System.out.println("You can only enter number");
+		}
+	}
+}
